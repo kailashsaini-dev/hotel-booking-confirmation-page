@@ -1,0 +1,527 @@
+
+/* base  */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 1.4rem;
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--Neutral-100-color);
+}
+
+/* themes */
+
+:root{
+    --Terracotta-700-color:hsl(15, 69%, 37%);
+    --blue-color:hsl(230, 49%, 56%);
+    --rose-color:hsl(340, 48%, 52%);
+    --black-color:hsl(33, 15%, 15%);
+    --Neutral-400-color:hsl(36, 22%, 86%);
+    --Neutral-600-color:hsl(33, 17%, 41%);
+    --Neutral-800-color:hsl(33, 22%, 20%);
+    --Neutral-0-color:hsl(0, 0%, 100%);
+    --Neutral-100-color:hsl(35, 60%, 96%);
+    --Sun-300-color:hsl(44, 84%, 75%);
+    --sun-200-color:hsl(45, 100%, 74%);
+    --sun-50-color:hsl(41, 100%, 93%);
+    --natural-200-color:hsl(30, 24%, 93%);
+    --Terracotta-400: hsl(22, 72%, 56%);
+}
+
+/* reuseable */
+
+
+h1,h2,h3{
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+}
+
+.dashboard{
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 25rem 1fr;
+}
+
+li{
+    list-style-type: none;
+    padding: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+p{
+    color: var(--Neutral-800-color);
+}
+
+
+/* asidebar */
+
+.Sidebar{
+    padding: 2rem;
+}
+
+.logo{
+    padding-bottom: 1rem;
+    width: 100%;
+    border-bottom: .1rem solid var(--Neutral-400-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img:last-child{
+    display: none;
+    width: 100%;
+    max-width: 3rem;
+}
+
+.sidebar-nav{
+    margin-top: 1rem;
+}
+
+.sidebar-nav span{
+    color: var(--black-color);
+}
+
+.sidebar-nav strong{
+    color: var(--Neutral-0-color);
+    background-color: var(--Terracotta-700-color);
+    border-radius: 50%;
+    padding:  .3rem .5rem;
+    font-size: 1rem;
+    margin-left: auto;
+    text-align: center;
+}
+
+.sidebar-nav li{
+    margin-bottom: 1rem;
+}
+
+.sidebar-nav li a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+     white-space: nowrap;
+}
+
+.sidebar-nav li:hover{
+    background-color:var(--Neutral-0-color);
+    border-radius: 1rem;
+    border: .1rem solid var(--Terracotta-700-color);
+}
+
+.sidebar-nav li:first-child{
+    background-color:var(--Neutral-0-color) ;
+    border-radius: 1rem;
+}
+
+/* weather-card */
+
+.weather-card{
+    margin-top:15rem;
+    padding: 1rem;
+    background-image: url(hotel-booking-confirmation-page-main/assets/images/icon-weather.svg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: right -20px top -20px;
+    background-color: var(--Sun-300-color);
+    border-radius: 1rem;
+}
+
+.weather-card h2{
+    margin: 1rem 0rem;
+    font-size: 3rem;
+}
+
+.weather-card p:first-child {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+}
+
+
+/* address */
+
+.address{
+    margin-top: 4rem;
+}
+
+.address p{
+    margin-bottom: 1rem;
+    color: var(--Neutral-600-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+}
+
+/* main-content */
+
+.main-content{
+    min-width: 0;
+    padding: 2rem;
+    border-left: .1rem solid var(--Neutral-400-color);
+}
+
+.booking-title p{
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.booking-title h1{
+    font-size: 4rem;
+}
+
+.booking-title span{
+    color: var(--Terracotta-700-color);
+}
+
+.booking-head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    padding: 1rem 2rem;
+    border: .1rem solid var(--Neutral-400-color);
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border .2s;
+}
+
+button:hover{
+    border: .2rem solid var(--Terracotta-700-color);
+}
+
+.header-button button:last-child{
+    background-color: var(--black-color);
+    color: var(--Neutral-0-color);
+    margin-left: 1rem;
+}
+
+/* card-section */
+
+.card-section{
+    width: 100%;
+    padding: 2rem;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+}
+
+.description p{
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    text-align: center;
+}
+
+.description span{
+    color: var(--Terracotta-700-color);
+    font-size: 1.5rem;
+}
+
+/* stay-card */
+
+.stay-card{
+    padding: 2rem;
+    background-color: var(--Neutral-0-color);
+    border-radius: 1rem;
+    box-shadow: 0rem 1rem 1rem 0rem var(--Neutral-400-color);
+    transform: rotate(-5deg);
+}
+
+
+.receipt-head{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: .2rem dotted var(--Neutral-400-color);
+}
+
+.receipt-head p{
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: var(--Neutral-600-color);
+
+}
+
+
+.stay-dates{
+    display: flex;
+    padding: 2rem;
+    justify-content: space-between;
+}
+
+.stay-dates h3{
+    margin-top: 1rem;
+    font-size: 3rem;
+}
+
+.booking-room, .breakfast-details, .tax-details{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.booking-details{
+    border-bottom: .1rem solid var(--Neutral-600-color);
+}
+
+.total-paid, .paid-details{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: .1rem;
+}
+
+.paid-details{
+    margin-top: 3rem;
+}
+
+.total-paid h3{
+    font-size: 2rem;
+}
+
+
+
+
+/* host-card  */
+
+.host-card{
+    padding: 2rem;
+    background-color: var(--Terracotta-700-color);
+    border-radius: 1rem;
+    box-shadow: 0rem 1rem 3rem 0rem var(--Terracotta-400);
+    transform: rotate(5deg);
+}
+
+.host-welcome{
+    display: flex;
+    justify-content: space-between;
+    border-top: .1rem dotted var(--sun-200-color);
+    padding-top: 1rem;
+   
+}
+
+.host-welcome p{
+    color: var(--sun-200-color);
+    text-transform: uppercase;
+    font-size: 1rem;
+    word-spacing: .5rem;
+    letter-spacing: .15rem;
+}
+
+.host-card h2 span{
+    color: var(--sun-200-color);
+    font-size: 2rem;
+}
+
+.host-card h2{
+    font-size: 4rem;
+    margin: 2rem 0rem;
+}
+
+.host-card p, .host-card h2, .host-card h3{
+    color: var(--sun-50-color);
+}
+
+.room-name{
+    margin-top: 5rem;
+}
+
+.room-name h3{
+    margin-top: 1rem;
+}
+
+.card-info{
+     margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+.arrival-card, .wifi-card, .breakfast-card{
+    padding: 2rem;
+    border: .1rem solid var(--Neutral-400-color);
+    border-radius: 1rem;
+}
+
+.arrival-card img{
+    padding: .5rem;
+    background-color: var(--Terracotta-700-color);
+    border-radius: 1rem;
+}
+
+.arrival-card .card-title p{
+    color: var(--Terracotta-700-color);
+}
+
+.card-title{
+    display: flex;
+}
+
+.card-title p{
+    margin: auto 0;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.card-title p:last-child{
+    margin-left: auto;
+    font-size: 2.5rem;
+}
+
+.card-info h2{
+    margin-top: 2rem;
+}
+
+.card-details p{
+    margin-top: 1rem;
+}
+
+.wifi-card .card-title img{
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--blue-color);
+}
+
+.wifi-card .card-title p{
+    color: var(--blue-color);
+}
+
+.wifi-details{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    background-color: var(--natural-200-color);
+    padding: 1rem;
+}
+
+.wifi-details p:first-child{
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+}
+
+.wifi-details p:last-child {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    white-space: nowrap;
+}
+
+.wifi-details p span{
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    white-space: nowrap;
+    border: .2rem solid var(--Neutral-400-color);
+    cursor: pointer;
+}
+
+.wifi-details p span:hover{
+    border: .1rem solid var(--Terracotta-700-color);
+}
+
+.breakfast-card .card-title img{
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--rose-color);
+}
+
+.breakfast-card .card-title p{
+    color:var(--rose-color) ;
+}
+
+/* media-query */
+
+@media (max-width:1000px){
+    .card-section{
+        grid-template-columns: minmax(0, 1fr);
+        gap: 4rem;
+        padding: 2rem;
+    }
+    
+.dashboard {
+    grid-template-columns: 20rem minmax(0, 1fr);
+}
+
+.card-info{
+    grid-template-columns: minmax(0, 1fr);
+}
+ .description p {
+        display: none;
+    }
+
+}
+
+@media (max-width:800px){
+    .main-content {
+        width: 100%;
+        padding-top: 0rem;
+    }
+    .card-section{
+        margin-top: 2rem;
+        padding: 1rem;
+        gap: 2rem;
+   }
+
+    .card-info {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .dashboard{
+        grid-template-columns: 1fr;
+        row-gap: 0.5rem;
+    }
+
+    .logo img:last-child{
+        display: block;
+        width: 3rem;
+        height: auto;
+    }
+
+    .sidebar-nav,.weather-card,.address{
+        display: none;
+    }
+    .booking-title p{
+        font-size: 1.5rem;
+    }
+    .booking-head {
+        display: inline-block;
+        text-align: center;
+    }
+    .booking-title h1{
+        margin: .5rem 0rem 1.5rem 0rem;
+    }
+    .stay-card {
+        transform: rotate(2deg);
+    }
+    .host-card {
+       transform: rotate(-2deg);
+    }
+
+     .Sidebar{
+        padding: 1rem 1.5rem 0;
+    }
+    .logo{
+        padding-bottom: 1rem;
+    }
+    
+
+}
